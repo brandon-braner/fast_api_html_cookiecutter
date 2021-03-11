@@ -1,0 +1,4 @@
+{
+  "app_name": "app_name_with_underscores",
+  "env_prefix": "ENVIROMENT_PREFIX"
+}

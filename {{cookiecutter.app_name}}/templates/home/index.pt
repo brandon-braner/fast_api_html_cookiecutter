@@ -1,0 +1,12 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+        <div class="content">
+            Home - hard coded
+        </div>
+    </div>
+
+    <div metal:fill-slot="additional-css" tal:omit-tag="True">
+        <!-- additional css from the page -->
+    </div>
+</div>
