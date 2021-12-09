@@ -36,12 +36,10 @@ def configure_db():
     client = None
     if settings.app_env == 'development':
         url = f"mongodb://{username}:{password}@localhost:27017/database_name"
-        client = AsyncIOMotorClient(url)
+        return AsyncIOMotorClient(url)
     else:
         url = f'mongodb+srv://{settings.mongo_username}:{settings.mongo_password}@{settings.mongo_host}'
-        client = (url)
-    
-    return client
+        return (url)
 
 
 def configure_routes():

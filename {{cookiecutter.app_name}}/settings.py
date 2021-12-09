@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 
 
 def load_environment_files():
-    environment = os.getenv('environment') if os.getenv('environment') else 'development'
+    environment = os.getenv('environment') or 'development'
     common_env = Path(app_path) / 'common.env'
     environment_env = Path(app_path) / f'{environment}.env'
     return [common_env, environment_env]
